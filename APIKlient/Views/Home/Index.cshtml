@@ -1,0 +1,17 @@
+﻿<!-- Denna första rad sätter titeln på sidan till "Home Page" -->
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Denna div-tagg innehåller välkomsttexten och en länk till ASP.NET Core-dokumentationen -->
+<div class="text-center">
+    <h1 class="display-4">Välkommen</h1>
+    <p>Lär dig om <a href="https://docs.microsoft.com/aspnet/core">att bygga webbappar med ASP.NET Core</a>.</p>
+</div>
+<!-- Denna formulärtagg skickar ett POST-anrop till actionmetoden "SayHello" när man trycker på knappen -->
+<form asp-action="SayHello" method="post">
+    <p>Namn: <input type="text" id="name" name="name" /></p>
+    <button type="submit">Skicka</button>
+</form>
+<!-- Denna rad visar det som finns i ViewBag.Message -->
+@ViewBag.Message
